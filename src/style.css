@@ -527,11 +527,6 @@ p {
     font-size: 11px;
   }
 
-  .topbar nav a:nth-child(2),
-  .topbar nav a:nth-child(4) {
-    display: none;
-  }
-
   .hero {
     grid-template-columns: minmax(0, 1fr);
     gap: 36px;
@@ -586,6 +581,22 @@ p {
   }
 
   .footer {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width:480px) {
+  .topbar {
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    row-gap: 16px;
+  }
+
+  .topbar nav {
+    grid-column: 1;
+    justify-self: center;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
